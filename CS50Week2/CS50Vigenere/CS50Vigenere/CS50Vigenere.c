@@ -47,10 +47,10 @@ int main(int argc, char * argv[])
             }
         }
     }
-     
+    
     printf("%s\n", cipherword);
     
-
+    
     
     for (int lettercounter = 0; lettercounter < wordtoencodelength; lettercounter++)
     {
