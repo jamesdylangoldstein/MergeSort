@@ -8,19 +8,16 @@
 
 #include <stdio.h>
 #include <string.h>
+#include "cs50.h"
 
-int main(int argc, const char * argv[])
+int main(int argc, char * argv[])
 {
-    //printf("Enter a word or sentence to encode: ");
-    char wordtoencode[100] = "Meet me at the park at eleven am.  Zz! And, bring.";
+    printf("Enter a word or sentence to encode: ");
+    string wordtoencode = GetString();
     printf("%s\n", wordtoencode);
-    //printf("Enter a cipher word: ");
-    char cipherwordtorepeat[50] = "bacon";
     
-    // DOES NOT WORK UNLESS ALL CAPS
-    //FOUR IF STATEMENTS
-    //UPPER/UPPER, UPPER/LOWER, LOWER/LOWER, LOWER/UPPER
-    
+    string cipherwordtorepeat = argv[1];
+    printf("Cipher word: %s\n", cipherwordtorepeat);
     
     // Obtain the lengths for the word to be encoded and the cipher
     unsigned long wordtoencodelength = strlen(wordtoencode);
