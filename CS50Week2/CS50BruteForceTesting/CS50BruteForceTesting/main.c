@@ -21,8 +21,8 @@ int main(int argc, const char * argv[])
     string searchsalt = "50";
     string crackedpassword;
     int check;
-    string username = "jason";
-    string givenhash = "50CMVwEqJXRUY";
+    string username = "levatich";
+    string givenhash = "50Bpa7n/23iug";
     char bruteforce[20];
     
     // Brute force check one digit strings
