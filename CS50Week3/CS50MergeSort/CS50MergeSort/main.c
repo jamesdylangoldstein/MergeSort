@@ -10,10 +10,11 @@
 
 int main(int argc, const char * argv[]) {
     
-    int arrayOfNumbers[] = {8, 7, 6, 5, 4, 3, 2, 1};
-    int lengthOfArray = sizeof(arrayOfNumbers)/4;
-    int numberOfComparisons = lengthOfArray/2;
+    int arrayOfNumbers[] = {12, 11, 10, 9, 8, 7, 6, 5};
+    int lengthOfArray = sizeof(arrayOfNumbers) / 4;
+    int numberOfComparisons = lengthOfArray / 2;
     int bufferArray[lengthOfArray];
+    int endOfArray[lengthOfArray - 1];
 
     for(int printCounter = 0; printCounter < lengthOfArray; printCounter++)
     {
@@ -97,14 +98,15 @@ int main(int argc, const char * argv[]) {
     comparisonCounterArrayValue += 4;
     }
     
-    
     for(int printCounter = 0; printCounter < lengthOfArray; printCounter++)
     {
         printf("%i ", arrayOfNumbers[printCounter]);
     }
     printf("\n");
     
-   
+        
+    
+
     
     return 0;
 }
