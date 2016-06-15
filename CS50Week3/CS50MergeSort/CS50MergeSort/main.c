@@ -104,9 +104,14 @@ int main(int argc, const char * argv[]) {
     }
     printf("\n");
     
-        
+    // Third round
     
 
+    for(int printCounter = 0; printCounter < lengthOfArray; printCounter++)
+    {
+        printf("%i ", arrayOfNumbers[printCounter]);
+    }
+    printf("\n");
     
     return 0;
 }
