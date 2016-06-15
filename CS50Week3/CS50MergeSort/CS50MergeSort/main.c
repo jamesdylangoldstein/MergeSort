@@ -10,7 +10,7 @@
 
 int main(int argc, const char * argv[]) {
     
-    int arrayOfNumbers[] = {4, 3, 2, 1};
+    int arrayOfNumbers[] = {8, 7, 6, 5, 4, 3, 2, 1};
     int lengthOfArray = sizeof(arrayOfNumbers)/4;
     int numberOfComparisons = lengthOfArray/2;
     int bufferArray[lengthOfArray];
@@ -43,7 +43,6 @@ int main(int argc, const char * argv[]) {
     printf("\n");
     
     
-    
     // Second round
     
     for(int bufferCounter = 0; bufferCounter < lengthOfArray; bufferCounter++)
@@ -51,46 +50,52 @@ int main(int argc, const char * argv[]) {
         bufferArray[bufferCounter] = arrayOfNumbers[bufferCounter];
     }
     
-    if (bufferArray[0] > bufferArray[2])
+    comparisonCounterArrayValue = 0;
+    
+    for (int comparisonCounter = 1; comparisonCounter <= (numberOfComparisons/2); comparisonCounter++)
     {
-        arrayOfNumbers[0] = bufferArray[2];
-        
-        if(bufferArray[0] > bufferArray[3])
+        if (bufferArray[comparisonCounterArrayValue] > bufferArray[comparisonCounterArrayValue + 2])
         {
-            arrayOfNumbers[1] = bufferArray[3];
-            arrayOfNumbers[2] = bufferArray[0];
-            arrayOfNumbers[3] = bufferArray[1];
-        }
-        else
-        {
-            arrayOfNumbers[1] = bufferArray[0];
+            arrayOfNumbers[comparisonCounterArrayValue] = bufferArray[comparisonCounterArrayValue + 2];
             
-            if(bufferArray[1] > bufferArray[3])
+            if(bufferArray[comparisonCounterArrayValue] > bufferArray[comparisonCounterArrayValue + 3])
             {
-                arrayOfNumbers[2] = bufferArray[3];
-                arrayOfNumbers[3] = bufferArray[1];
+                arrayOfNumbers[comparisonCounterArrayValue + 1] = bufferArray[comparisonCounterArrayValue + 3];
+                arrayOfNumbers[comparisonCounterArrayValue + 2] = bufferArray[comparisonCounterArrayValue];
+                arrayOfNumbers[comparisonCounterArrayValue + 3] = bufferArray[comparisonCounterArrayValue + 1];
             }
             else
             {
-               arrayOfNumbers[2] = bufferArray[1];
-               arrayOfNumbers[3] = bufferArray[3];
+                arrayOfNumbers[comparisonCounterArrayValue + 1] = bufferArray[comparisonCounterArrayValue];
+                
+                if(bufferArray[comparisonCounterArrayValue + 1] > bufferArray[comparisonCounterArrayValue + 3])
+                {
+                    arrayOfNumbers[comparisonCounterArrayValue + 2] = bufferArray[comparisonCounterArrayValue + 3];
+                    arrayOfNumbers[comparisonCounterArrayValue + 3] = bufferArray[comparisonCounterArrayValue + 1];
+                }
+                else
+                {
+                   arrayOfNumbers[comparisonCounterArrayValue + 2] = bufferArray[comparisonCounterArrayValue + 1];
+                }
             }
         }
-    }
-    else
-    {
-        if(bufferArray[1] > bufferArray[2])
+        else
         {
-            arrayOfNumbers[1] = bufferArray[2];
-            
-            if (bufferArray[2] > bufferArray[3])
+            if(bufferArray[comparisonCounterArrayValue + 1] > bufferArray[comparisonCounterArrayValue + 2])
             {
-                arrayOfNumbers[2] = bufferArray[3];
-                arrayOfNumbers[3] = bufferArray[2];
+                arrayOfNumbers[comparisonCounterArrayValue + 1] = bufferArray[comparisonCounterArrayValue + 2];
+                
+                if (bufferArray[comparisonCounterArrayValue + 2] > bufferArray[comparisonCounterArrayValue + 3])
+                {
+                    arrayOfNumbers[comparisonCounterArrayValue + 2] = bufferArray[comparisonCounterArrayValue + 3];
+                    arrayOfNumbers[comparisonCounterArrayValue + 3] = bufferArray[comparisonCounterArrayValue + 2];
+                }
             }
         }
+
+    // Needs to be changed to dynamic value
+    comparisonCounterArrayValue += 4;
     }
-    
     
     
     for(int printCounter = 0; printCounter < lengthOfArray; printCounter++)
