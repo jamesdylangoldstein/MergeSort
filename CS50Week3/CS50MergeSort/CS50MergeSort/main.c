@@ -173,15 +173,15 @@ int main(int argc, const char * argv[]) {
                     }
                 }
             }
-            else if(bufferArray[0] < bufferArray[6])
+            else if (bufferArray[0] < bufferArray[6])
             {
                 arrayOfNumbers[2] = bufferArray[0];
                 
-                if(bufferArray[1] > bufferArray[6])
+                if (bufferArray[1] > bufferArray[6])
                 {
                     arrayOfNumbers[3] = bufferArray[6];
                     
-                    if(bufferArray[1] > bufferArray[7])
+                    if (bufferArray[1] > bufferArray[7])
                     {
                         arrayOfNumbers[4] = bufferArray[7];
                         
@@ -225,35 +225,122 @@ int main(int argc, const char * argv[]) {
                         }
                     }
                 }
+                else if (bufferArray[1] < bufferArray[6])
+                {
+                    arrayOfNumbers[3] = bufferArray[1];
+                    
+                    if (bufferArray[2] > bufferArray[6])
+                    {
+                        
+                    }
+                    
+                }
             }
         }
-        else if(bufferArray[0] < bufferArray[5])
+        else if (bufferArray[0] < bufferArray[5])
         {
             arrayOfNumbers[1] = bufferArray[0];
             
-            if(bufferArray[1] > bufferArray[5])
+            if (bufferArray[1] > bufferArray[5])
             {
                 arrayOfNumbers[2] = bufferArray[5];
                 
-                if(bufferArray[1] > bufferArray[6])
+                if (bufferArray[1] > bufferArray[6])
                 {
                     arrayOfNumbers[3] = bufferArray[6];
                     
+                    if (bufferArray[1] > bufferArray[7])
+                    {
+                        arrayOfNumbers[4] = bufferArray[7];
+                        
+                        arrayOfNumbers[5] = bufferArray[1];
+                        arrayOfNumbers[6] = bufferArray[2];
+                        arrayOfNumbers[7] = bufferArray[3];
+                    }
+                    else if (bufferArray[1] < bufferArray[7])
+                    {
+                        arrayOfNumbers[4] = bufferArray[1];
+                        
+                        if (bufferArray[2] > bufferArray[7])
+                        {
+                            arrayOfNumbers[5] = bufferArray[7];
+                            
+                            if (bufferArray[2] > bufferArray[3])
+                            {
+                                arrayOfNumbers[6] = bufferArray[3];
+                                arrayOfNumbers[7] = bufferArray[2];
+                            }
+                            else if (bufferArray[2] < bufferArray[3])
+                            {
+                                arrayOfNumbers[6] = bufferArray[2];
+                                arrayOfNumbers[7] = bufferArray[3];
+                            }
+                        }
+                        else if (bufferArray[2] < bufferArray[7])
+                        {
+                            arrayOfNumbers[5] = bufferArray[2];
+                            
+                            if (bufferArray[3] > bufferArray[7])
+                            {
+                                arrayOfNumbers[6] = bufferArray[7];
+                                arrayOfNumbers[7] = bufferArray[3];
+                            }
+                            else if (bufferArray[3] < bufferArray[7])
+                            {
+                                arrayOfNumbers[6] = bufferArray[3];
+                                arrayOfNumbers[7] = bufferArray[7];
+                            }
+                        }
+                    }
                 }
                 else if(bufferArray[1] < bufferArray[5])
                 {
                     arrayOfNumbers[3] = bufferArray[1];
                     
+                    arrayOfNumbers[5] = bufferArray[5];
+                    arrayOfNumbers[6] = bufferArray[6];
+                    arrayOfNumbers[7] = bufferArray[7];
                 }
-                
             }
-            else if(bufferArray[1] < bufferArray[5])
+            else if (bufferArray[1] < bufferArray[5])
             {
                 arrayOfNumbers[2] = bufferArray[1];
                 
-                if(bufferArray[2] > bufferArray[5])
+                if (bufferArray[2] > bufferArray[5])
                 {
                     arrayOfNumbers[3] = bufferArray[5];
+                    
+                    if (bufferArray[2] > bufferArray[6])
+                    {
+                        arrayOfNumbers[4] = bufferArray[6];
+                        
+                        if (bufferArray[2] > bufferArray[7])
+                        {
+                            arrayOfNumbers[5] = bufferArray[7];
+                            
+                            arrayOfNumbers[6] = bufferArray[2];
+                            arrayOfNumbers[7] = bufferArray[3];
+                        }
+                        else if (bufferArray[2] < bufferArray[7])
+                        {
+                            arrayOfNumbers[5] = bufferArray[2];
+                            
+                            if (bufferArray[3] > bufferArray[7])
+                            {
+                                arrayOfNumbers[6] = bufferArray[7];
+                                arrayOfNumbers[7] = bufferArray[3];
+                            }
+                            else if (bufferArray[3] < bufferArray[7])
+                            {
+                                arrayOfNumbers[6] = bufferArray[3];
+                                arrayOfNumbers[7] = bufferArray[7];
+                            }
+                        }
+                    }
+                    else if (bufferArray[2] < bufferArray[6])
+                    {
+                        arrayOfNumbers[4] = bufferArray[2];
+                    }
                     
                 }
                 else if(bufferArray[2] < bufferArray[5])
